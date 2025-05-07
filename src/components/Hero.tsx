@@ -2,7 +2,6 @@ import React from 'react';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import './Hero.css'; 
 
 const Hero: React.FC = () => {
   return (
@@ -16,15 +15,20 @@ const Hero: React.FC = () => {
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-        borderRadius: '8px',
         marginBottom: '20px',
       }}
     >
       <Typography variant="h2" component="h1" sx={{ fontWeight: 'bold', marginBottom: '20px' }}>
-        Build Your Dream Website
+      Gianpaolo Papa
       </Typography>
-      <Typography variant="body1" sx={{ fontSize: '1.2rem', marginBottom: '30px', maxWidth: '600px' }}>
-        We create stunning, responsive, and professional websites tailored to your needs.
+      <Typography variant="body1" sx={{ fontSize: '1.4rem', marginBottom: '30px', maxWidth: '600px' }}>
+      Technical Lead | Engineering Manager | Cloud Architect
+      </Typography>
+      <Typography sx={{ fontSize: '1.2rem', marginBottom: '30px', maxWidth: '600px', color: '#333' }}>
+        Results-driven leader with 24 years of experience specializing in JavaScript applications
+        within AWS cloud environments.<br />
+        Delivering scalable, secure, and user-centric applications
+        for large communities and high load.
       </Typography>
       <Button
         variant="contained"

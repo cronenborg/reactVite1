@@ -1,12 +1,13 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
-import './Home.css';
-
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
 const Home: React.FC = () => {
   return (
-    <div className="page">
+    <Container maxWidth="lg">
       {/* Navbar */}
       <Navbar />
 
@@ -14,11 +15,15 @@ const Home: React.FC = () => {
       <Hero />
 
       {/* Main Content */}
-      <div className="main-content">
-        <h2>Welcome to WebAgency</h2>
-        <p>Explore our services and get in touch to start your project today!</p>
-      </div>
-    </div>
+      <Box sx={{ textAlign: 'center', marginTop: 4 }}>
+        <Typography variant="h4" component="h2" gutterBottom>
+          Welcome to My Page
+        </Typography>
+        <Typography variant="body1">
+          Ready?
+        </Typography>
+      </Box>
+    </Container>
   );
 };
 

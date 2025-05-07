@@ -1,37 +1,73 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
 
 const Contact: React.FC = () => {
   return (
-    <div className="page">
-      <h1>Contact Page</h1>
-      <p>Get in touch with us!</p>
-      <form>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" />
-        </div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" />
-        </div>
-        <div>
-          <label htmlFor="message">Message:</label>
-          <textarea id="message" name="message" rows={4}></textarea>
-        </div>
-        <button type="submit">Send</button>
-      </form>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Back to Home</Link>
-          </li>
-          <li>
-            <Link to="/about">Go to About</Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <Container maxWidth="lg">
+      {/* Navbar */}
+      <Navbar />
+
+      {/* Main Content */}
+      <Box sx={{ textAlign: 'center', marginTop: 4 }}>
+        <Typography variant="h4" component="h2" gutterBottom>
+          Contact Us
+        </Typography>
+        <Typography variant="body1" sx={{ marginBottom: 4 }}>
+          Feel free to reach out to us by filling out the form below.
+        </Typography>
+        <Box
+          component="form"
+          sx={{
+            maxWidth: 600,
+            margin: '0 auto',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 2,
+          }}
+          noValidate
+          autoComplete="off"
+        >
+          <TextField
+            id="name"
+            label="Name"
+            variant="outlined"
+            fullWidth
+            required
+          />
+          <TextField
+            id="email"
+            label="Email"
+            type="email"
+            variant="outlined"
+            fullWidth
+            required
+          />
+          <TextField
+            id="message"
+            label="Message"
+            variant="outlined"
+            multiline
+            rows={4}
+            fullWidth
+            required
+          />
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            sx={{ alignSelf: 'center', paddingX: 4 }}
+          >
+            Send
+          </Button>
+        </Box>
+      </Box>
+    </Container>
   );
 };
 
