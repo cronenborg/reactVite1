@@ -1,21 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import './Home.css';
+
 
 const Home: React.FC = () => {
   return (
     <div className="page">
-      <h1>Home Page</h1>
-      <p>Welcome to our React Router example!</p>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/about">Go to About</Link>
-          </li>
-          <li>
-            <Link to="/contact">Go to Contact</Link>
-          </li>
-        </ul>
-      </nav>
+      {/* Navbar */}
+      <Navbar />
+
+      {/* Hero Section */}
+      <Hero />
+
+      {/* Main Content */}
+      <div className="main-content">
+        <h2>Welcome to WebAgency</h2>
+        <p>Explore our services and get in touch to start your project today!</p>
+      </div>
     </div>
   );
 };
